@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Define or customize theme variables */
+@theme {
+  /* Example: overriding existing color variables or adding new ones */
+  --color-primary: #1d4ed8;
+  --color-secondary: #9333ea;
+
+  /* Extending fonts */
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  /* Spacing / sizing variables */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+
+  /* Breakpoints, if you need to change them */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+
+  /* ... add other namespaces as needed ... */
+}
+
+/* Optionally, you can add custom styles using these theme variables */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-md text-white;
+    background-color: var(--color-primary);
+  }
+}
+
+
+@layer utilities {
+  /* maybe something custom */
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .animate-fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeInUp 0.8s cubic-bezier(.4,0,.2,1) 0.1s forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
