@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const socials = [
   {
-    href: "mailto:syedabidahmed@gmail.com",
+    href: "mailto:syedbid.ah30@gmail.com",
     label: "Email",
     icon: (
       <svg width="22" height="22" fill="currentColor" className="text-secondary"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8l8 5 8-5v10z"/></svg>
@@ -74,6 +74,18 @@ export default function Contact() {
           {success && <div className="text-green-600 text-sm">{success}</div>}
 
           <button type="submit" className="btn-primary hover:scale-105 transition-transform duration-300">Send Message</button>
+
+          <div className="mt-6 flex flex-col items-center">
+            <h3 className="text-lg font-semibold text-primary mb-2">Resume</h3>
+            <div className="flex gap-4">
+              <a href="/resume.pdf" download className="btn-primary hover:scale-105 transition-transform duration-300">Download Resume</a>
+              <label className="btn-primary cursor-pointer hover:scale-105 transition-transform duration-300">
+                <input type="file" accept="application/pdf" className="hidden" />
+                Upload Resume
+              </label>
+            </div>
+            <span className="text-xs text-gray-400 mt-2">(PDF only, max 2MB)</span>
+          </div>
         </form>
         <div className="flex flex-col gap-4 items-center w-full max-w-xs mx-auto mt-8 md:mt-0">
           <div className="text-gray-700 font-medium mb-2">Or reach out directly:</div>

@@ -12,6 +12,7 @@ const projects = [
     ),
     link: "https://github.com/OptimisticAbid/mern-project", // Replace with actual project link if available
     ongoing: false,
+    
   },
   {
     name: "Stock Management Application",
@@ -29,26 +30,46 @@ const projects = [
   },
 ];
 
+
 export default function Projects() {
   return (
     <section id="projects" className="max-w-5xl mx-auto py-16 px-6 animate-fade-in">
-      <h2 className="text-3xl font-bold mb-4 text-primary transition-all duration-500">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-8">
-        {projects.map(project => (
-          <div key={project.name} className="p-6 bg-white rounded-lg shadow-md border hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-semibold mb-2 text-brand transition-colors duration-300 flex items-center gap-2">
-              {project.name}
-              {project.ongoing && (
-                <span className="inline-block text-xs px-2 py-1 bg-secondary text-white rounded">Ongoing</span>
-              )}
-            </h3>
-            <div className="text-gray-700 mb-4 transition-colors duration-300 text-sm leading-relaxed">{project.description}</div>
-            <a href={project.link} className="inline-flex items-center gap-1 text-primary hover:underline hover:text-secondary transition-colors duration-300">
-              <span>Project Link</span>
-              <svg width="18" height="18" fill="none" stroke="currentColor" className="inline"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12l7-7m0 0v6m0-6h-6"/></svg>
-            </a>
-          </div>
-        ))}
+      <div className="bg-white/80 backdrop-blur-lg rounded-xl shadow-lg p-8">
+        <h2 className="text-3xl font-bold mb-4 text-primary transition-all duration-500">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map(project => (
+            <div key={project.name} className="p-6 bg-white/90 rounded-lg shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between">
+              <h3 className="text-xl font-semibold mb-2 text-brand transition-colors duration-300 flex items-center gap-2">
+                {project.name}
+                {project.ongoing && (
+                  <span className="inline-block text-xs px-2 py-1 bg-secondary text-white rounded">Ongoing</span>
+                )}
+              </h3>
+              <div className="text-gray-700 mb-4 transition-colors duration-300 text-sm leading-relaxed">{project.description}</div>
+              <div className="flex gap-2 mb-2">
+                {/* Example tags, you can expand per project */}
+                {project.name === 'URL Shortener' && (
+                  <>
+                    <span className="px-2 py-1 bg-cyan-100 text-cyan-700 rounded text-xs">React</span>
+                    <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Node.js</span>
+                    <span className="px-2 py-1 bg-teal-100 text-teal-700 rounded text-xs">MongoDB</span>
+                  </>
+                )}
+                {project.name === 'Stock Management Application' && (
+                  <>
+                    <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Node.js</span>
+                    <span className="px-2 py-1 bg-teal-100 text-teal-700 rounded text-xs">MongoDB</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Express</span>
+                  </>
+                )}
+              </div>
+              <a href={project.link} className="inline-flex items-center gap-1 text-primary hover:underline hover:text-secondary transition-colors duration-300 mt-auto">
+                <span>Project Link</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" className="inline"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12l7-7m0 0v6m0-6h-6"/></svg>
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

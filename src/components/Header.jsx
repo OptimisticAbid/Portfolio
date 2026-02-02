@@ -42,6 +42,7 @@ export default function Header() {
           <a href="#about" onClick={e => handleNavClick(e, 'about')} className="text-gray-700 hover:text-primary transition-colors">About</a>
           <a href="#skills" onClick={e => handleNavClick(e, 'skills')} className="text-gray-700 hover:text-primary transition-colors">Skills</a>
           <a href="#projects" onClick={e => handleNavClick(e, 'projects')} className="text-gray-700 hover:text-primary transition-colors">Projects</a>
+          <a href="#resume" onClick={e => handleNavClick(e, 'resume')} className="text-gray-700 hover:text-primary transition-colors">Resume</a>
           <a href="#contact" onClick={e => handleNavClick(e, 'contact')} className="text-gray-700 hover:text-primary transition-colors">Contact</a>
         </nav>
         <div className="hidden md:flex items-center space-x-3 ml-6">
@@ -63,6 +64,7 @@ export default function Header() {
             <a href="#about" onClick={e => handleNavClick(e, 'about')} className="text-gray-700 hover:text-primary transition-colors">About</a>
             <a href="#skills" onClick={e => handleNavClick(e, 'skills')} className="text-gray-700 hover:text-primary transition-colors">Skills</a>
             <a href="#projects" onClick={e => handleNavClick(e, 'projects')} className="text-gray-700 hover:text-primary transition-colors">Projects</a>
+            <a href="#resume" onClick={e => handleNavClick(e, 'resume')} className="text-gray-700 hover:text-primary transition-colors">Resume</a>
             <a href="#contact" onClick={e => handleNavClick(e, 'contact')} className="text-gray-700 hover:text-primary transition-colors">Contact</a>
             <div className="flex items-center space-x-3 pt-2">
               {socialLinks.map(link => (
