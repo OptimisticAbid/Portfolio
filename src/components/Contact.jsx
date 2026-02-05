@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import Resume from "./Resume.jsx";
 
 const socials = [
   {
@@ -75,16 +76,8 @@ export default function Contact() {
 
           <button type="submit" className="btn-primary hover:scale-105 transition-transform duration-300">Send Message</button>
 
-          <div className="mt-6 flex flex-col items-center">
-            <h3 className="text-lg font-semibold text-primary mb-2">Resume</h3>
-            <div className="flex gap-4">
-              <a href="/resume.pdf" download className="btn-primary hover:scale-105 transition-transform duration-300">Download Resume</a>
-              <label className="btn-primary cursor-pointer hover:scale-105 transition-transform duration-300">
-                <input type="file" accept="application/pdf" className="hidden" />
-                Upload Resume
-              </label>
-            </div>
-            <span className="text-xs text-gray-400 mt-2">(PDF only, max 2MB)</span>
+          <div>
+            <Resume/>
           </div>
         </form>
         <div className="flex flex-col gap-4 items-center w-full max-w-xs mx-auto mt-8 md:mt-0">
