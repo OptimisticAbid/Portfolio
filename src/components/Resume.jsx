@@ -7,7 +7,7 @@ export default function Resume() {
       <div className="bg-white rounded-lg shadow-md border p-6 flex flex-col items-center">
         <p className="text-gray-700 mb-4 text-center">Download my latest resume </p>
         <a
-          href="/resume.pdf"
+          href="./resume.pdf"
           download
           className="btn-primary flex items-center gap-2 hover:scale-105 transition-transform duration-300"
         >
