@@ -49,8 +49,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-5xl mx-auto py-16 px-6 animate-fade-in">
-      <h2 className="text-3xl font-bold mb-4 text-secondary transition-all duration-500">Contact</h2>
+    <section id="contact" className="max-w-5xl mx-auto py-16 px-6 animate-fade-in backdrop-blur-lg  shadow-lg">
+      <h2 className="text-3xl font-bold mx-10 mb-4 text-secondary transition-all duration-500">Contact</h2>
       <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-white rounded-lg shadow-md border p-6 w-full max-w-md mx-auto">
           <label className="flex items-center gap-2 text-gray-700 font-medium">
@@ -76,9 +76,6 @@ export default function Contact() {
 
           <button type="submit" className="btn-primary hover:scale-105 transition-transform duration-300">Send Message</button>
 
-          <div>
-            <Resume/>
-          </div>
         </form>
         <div className="flex flex-col gap-4 items-center w-full max-w-xs mx-auto mt-8 md:mt-0">
           <div className="text-gray-700 font-medium mb-2">Or reach out directly:</div>
